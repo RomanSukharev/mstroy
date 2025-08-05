@@ -44,6 +44,7 @@ const {
     justify-content: center;
     cursor: pointer;
     transition: 0.2s;
+    z-index: 999;
 
     img {
       width: 12px;

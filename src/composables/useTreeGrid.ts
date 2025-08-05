@@ -56,14 +56,19 @@ export function useTreeGrid(isEditMode = ref(false)) {
         const { id } = params.data
         const target = params.event.target as HTMLElement
 
-        if (target.classList.contains('tree-grid__btn--add')) {
+        const addBtn = target.closest('.tree-grid__btn--add')
+        const removeBtn = target.closest('.tree-grid__btn--remove')
+
+        if (addBtn) {
           const newId = Date.now()
           treeStore.add({ id: newId, parent: id, label: 'Новый элемент' })
         }
-        if (target.classList.contains('tree-grid__btn--remove')) {
+
+        if (removeBtn) {
           treeStore.remove(id)
         }
       }
+
     },
     {
       headerName: 'Наименование',
