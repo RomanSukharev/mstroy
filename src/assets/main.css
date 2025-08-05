@@ -1,0 +1,13 @@
+#app {
+  max-width: 964px;
+  margin: 0 auto;
+  font-weight: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border-radius: 0;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
